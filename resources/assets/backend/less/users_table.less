@@ -1,0 +1,59 @@
+#users_list {
+    #table {
+        & .container {
+            & .table-responsive {
+                & table {
+                    tr {
+                        th {
+                            font-size: 0.95rem;
+                            text-align: center;
+                        }
+                        td {
+                            font-size: 0.85rem;
+                            text-align: center;
+                            vertical-align: middle;
+                            img {
+                                height: 64px;
+                                margin: 0 auto;
+                                object-fit: contain;
+                                object-position: center;
+                                width: 64px;
+                            }
+                            span {
+                                &:first-child {
+                                    margin-right: 1rem;
+                                }
+                                i {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & nav {
+				justify-content: center;
+			    display: flex;
+			    margin: 1rem 0;
+				& ul {
+					li {
+						box-shadow: none;
+						outline: none;
+						& a {
+							box-shadow: none;
+							color: @blue;
+							outline: none;
+						}
+						&.active {
+							a {
+								border-color: transparent;
+								color: @white;
+								background-color: @blue;
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

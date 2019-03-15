@@ -1,0 +1,30 @@
+@xs: ~"screen and (min-width: 425px)";
+@sm: ~"screen and (min-width: 576px)";
+@md: ~"screen and (min-width: 768px)";
+@lg: ~"screen and (min-width: 992px)";
+@xl: ~"screen and (min-width: 1200px)";
+@xxl: ~"screen and (min-width: 1600px)";
+@white: #FFF;
+@black: #262626;
+@blue: #454d55;
+
+body, html {
+    font-family: Montserrat, 'sans-serif';
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    outline: unset !important;
+    box-shadow: none !important;
+    &:focus {
+        outline: unset !important;
+        box-shadow: none !important;
+    }
+}
+
+.was-validated .is-invalid~.invalid-feedback {
+    display: block;
+}

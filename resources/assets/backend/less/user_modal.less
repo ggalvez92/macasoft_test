@@ -1,0 +1,67 @@
+#userModal {
+    & .v--modal-background-click {
+        & .v--modal-box {
+            position: relative;
+            & > .close_btn {
+                cursor: pointer;
+                opacity: 1;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translate(-50%, 50%);
+                width: 18px;
+                z-index: 1;
+                @media @md {
+                    right: 0;
+                    top: 0;
+                    transform: translate(-50%, 50%);
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            
+            & .user-container {
+                padding: 1rem 2.5rem;
+                & .title {
+                    span {
+                        color: @white;
+                        font-weight: 700;
+                    }
+                }
+                & form {
+                    margin-top: 1rem;
+                    & .form-group {
+                        &:last-child {
+                            margin-top: 2rem;
+                        }
+                        input {
+                            border: 0;
+                            border-bottom: 1px solid rgba(0,0,0,0.3);
+                            border-radius: 0;
+                            color: @black;
+                            font-size: 0.9rem;
+                            transition: border 0.5s ease;
+                            &::placeholder {
+                                color: @black;
+                                font-size: 0.9rem;
+                                opacity: 0.6;
+                            }
+                            &:focus {
+                                border-bottom: 1px solid rgba(0,0,0,1);
+                            }
+                        }
+                        .btn {
+                            background-color: @black;
+                            border-radius: 40px;
+                            color: @white;
+                            font-weight: 700;
+                            padding: 0.5rem 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

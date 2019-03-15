@@ -1,0 +1,89 @@
+section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: stretch;
+    height: auto;
+    @media @md {
+        height: 100vh;
+        flex-direction: row;
+    }
+    & #form_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-top: 3.5rem;
+        @media @md {
+            flex-basis: 60%;
+            margin-top: 0;
+        }
+        @media @lg {
+            flex-basis: auto;
+            width: 700px;
+        }
+        & .logo {
+            margin-bottom: 2rem;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+        }
+        & form {
+            margin-top: 1rem;
+            width: 80%;
+            & .form-group {
+                &:last-child {
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+                input {
+                    border: 0;
+                    border-bottom: 1px solid rgba(0,0,0,0.3);
+                    border-radius: 0;
+                    color: @black;
+                    font-size: 0.9rem;
+                    text-align: center;
+                    transition: border 0.5s ease;
+                    &::placeholder {
+                        color: @black;
+                        font-size: 0.9rem;
+                        opacity: 0.6;
+                    }
+                    &:focus {
+                        border-bottom: 1px solid rgba(0,0,0,1);
+                    }
+                }
+                .btn {
+                    background-color: @black;
+                    border-radius: 40px;
+                    color: @white;
+                    font-weight: 700;
+                    padding: 0.5rem 2rem;
+                }
+            }
+        }
+    }
+    & #form_img {
+        margin-left: auto;
+        height: 200px;
+        @media @md {
+            height: 100%;
+            flex-basis: 93%;
+        }
+        @media @lg {
+            flex-basis: auto;
+        }
+        & figure {
+            margin: 0 auto;
+            height: 100%;
+            & img {
+                display: block;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+            }
+        }
+    }
+}

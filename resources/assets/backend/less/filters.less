@@ -1,0 +1,14 @@
+#filters {
+    & .container {
+        & .row {
+            & > div {
+                :first-child {
+                    margin-right: 0;
+                    @media @md {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
