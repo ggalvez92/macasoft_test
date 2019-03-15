@@ -64,7 +64,16 @@ const app = new Vue({
         },
         clearErrorMsg: function(event)
         {
-            var elem = $(event.target);
+            let elem = $(event.target);
+            if(elem.hasClass('is-invalid'))
+            {
+                elem.removeClass('is-invalid');
+                elem.next().html('');
+            }
+        },
+        clearChkErrorMsg: function(event)
+        {
+            let elem = $(event.target).next();
             if(elem.hasClass('is-invalid'))
             {
                 elem.removeClass('is-invalid');

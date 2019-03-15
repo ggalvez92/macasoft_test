@@ -46,7 +46,7 @@ class UserController extends Controller
             'password' => 'required|min:6|required_with:password_confirmation|same:password_confirmation',
             'password_confirmation' => 'required|min:6',
             'roles' => 'required',
-            'image' => 'required|image|mimes:jpg,jpeg,png|max:128',
+            'image' => 'image|mimes:jpg,jpeg,png|max:128',
         ];
 
         if(!is_null($id))
@@ -216,7 +216,7 @@ class UserController extends Controller
             }
         }
 
-    	return response()->json(['user' => $o, 'roles' => $roles],200);
+    	return response()->json(['user' => $o],200);
     }
 
     public function delete(Request $request)

@@ -11,7 +11,6 @@
 - php artisan serve
 - usuario por default es admin@admin.com , clave 123456
 
-
 ## Licencia de uso 
 
 Solo para motivo de prueba para el test de conocimiento.

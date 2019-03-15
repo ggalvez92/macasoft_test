@@ -86,6 +86,7 @@
                             class="custom-control-input" 
                             :id="'customControlValidation'+index"
                             v-model="user.roles_list[index].value"
+                            v-on="{ click: $parent.clearChkErrorMsg, focusin: $parent.clearChkErrorMsg }"
                             >
                     <label class="custom-control-label" :for="'customControlValidation'+index">{{ item.name }}</label>
                     <div class="invalid-feedback roles-error" type="checkbox"></div>

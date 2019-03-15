@@ -24,30 +24,34 @@ Route::group(['middleware' => 'auth'], function(){
 	]);
 	/************************************************/
 
+    // Para evitar que un usuario que no sea administrador pueda 
+    // acceder a los metodos de crear,editar,listar y eliminar
+    Route::group(['middleware' => 'admin'], function(){
     /******************USUARIOS**********************/
-    Route::post('user/roles/list',[
-        'uses' => 'UserController@rolesList',
-        'as' => 'user.roles.list'
-    ]);
+        Route::post('user/roles/list',[
+            'uses' => 'UserController@rolesList',
+            'as' => 'user.roles.list'
+        ]);
 
-    Route::post('user/ct',[
-        'uses' => 'UserController@ct',
-        'as' => 'user.ct'
-    ]);
+        Route::post('user/ct',[
+            'uses' => 'UserController@ct',
+            'as' => 'user.ct'
+        ]);
 
-    Route::post('user/list',[
-        'uses' => 'UserController@list',
-        'as' => 'user.list'
-    ]);
+        Route::post('user/list',[
+            'uses' => 'UserController@list',
+            'as' => 'user.list'
+        ]);
 
-    Route::post('user/detail',[
-        'uses' => 'UserController@detail',
-        'as' => 'user.detail'
-    ]);
+        Route::post('user/detail',[
+            'uses' => 'UserController@detail',
+            'as' => 'user.detail'
+        ]);
 
-    Route::post('user/delete',[
-        'uses' => 'UserController@delete',
-        'as' => 'user.delete'
-    ]);
-    /************************************************/
+        Route::post('user/delete',[
+            'uses' => 'UserController@delete',
+            'as' => 'user.delete'
+        ]);
+        /************************************************/
+    });
 });
