@@ -13,9 +13,7 @@
     <main id="app">
         <loading></loading>
         @yield('content')
-        
     </main>
-    @include('login.footer')
     <script src="{{ asset('login/js/app.js?'.time()) }}"></script>
 </body>
 </html>
